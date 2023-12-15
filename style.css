@@ -11,6 +11,7 @@ font-family: 'Montserrat', sans-serif; */
 :root {
      --text-color: #34355B;
      --button-bg: #FF9500;
+     --button-bg-hover: #b66a00;
      --fortune-bg: #E4EDF1;
      font-size: 62.5%;
 }
@@ -53,6 +54,26 @@ main {
     margin-bottom: 2.6rem;
 }
 
+.cookie-closed img:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
 .cookie-opened .fortune-text {
      padding: 1rem;
      box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
@@ -71,6 +92,12 @@ main {
     font-family: 'DM Sans', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
+    transition: .2s ease-in-out;
+}
+
+.cookie-opened button:hover {
+    background-color: var(--button-bg-hover);
+    cursor: pointer;
 }
 
 .hide {
