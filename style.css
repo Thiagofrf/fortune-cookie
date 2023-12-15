@@ -10,7 +10,7 @@ font-family: 'Montserrat', sans-serif; */
 
 :root {
      --text-color: #34355B;
-     -button-bg: #FF9500;
+     --button-bg: #FF9500;
      --fortune-bg: #E4EDF1;
      font-size: 62.5%;
 }
@@ -35,9 +35,10 @@ main {
     text-align: center;
     border-radius: .5rem;
     box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+    width: min(42.8rem, 90%);
 }
 
-.cookie-closed h1 {
+.cookie-closed h1, .cookie-opened h2 {
     color: var(--text-color);
     font-family: 'Montserrat', sans-serif;
     font-size: 2.4rem;
@@ -52,6 +53,26 @@ main {
     margin-bottom: 2.6rem;
 }
 
+.cookie-opened .fortune-text {
+     padding: 1rem;
+     box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+     background-color: #E4EDF1;
+     font-family: 'Dancing Script', cursive;
+     font-size: 2.4rem;
+     color: #000;
+}
+
+.cookie-opened button {
+    background-color: var(--button-bg);
+    border: none;
+    border-radius: .4rem;
+    padding: 1.6rem;
+    color: #FFF;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
 .hide {
-    display: none;
+    display: none; 
 }
